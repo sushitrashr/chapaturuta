@@ -24,17 +24,32 @@
   --top-bar-height: auto;
 }
 
-* { box-sizing: border-box; }
-
 body, html {
-  margin: 0; padding: 0; height: 100%; width: 100%;
-  font-family: 'Outfit', sans-serif;
-  background-color: var(--background);
-  color: var(--text-main);
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* Comportamiento de App Nativa */
+  -webkit-tap-highlight-color: transparent; /* Quita el destello azul al tocar botones */
+  user-select: none; /* Evita que el usuario seleccione el texto por accidente */
+  -webkit-user-select: none;
+  touch-action: manipulation; /* Evita el doble toque para hacer zoom */
 }
 
-#root { height: 100vh; width: 100vw; display: flex; position: relative; }
+/* Permitir selección de texto SOLO en los inputs de búsqueda */
+input, textarea {
+  user-select: auto;
+  -webkit-user-select: auto;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-main);
+  overflow: hidden; /* Evita el "rebote" (overscroll) al hacer scroll en celular */
+  overscroll-behavior-y: none;
+  height: 100vh; width: 100vw; display: flex; position: relative; 
+}
 
 /* MAP */
 .map-container { flex: 1; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 1; }
