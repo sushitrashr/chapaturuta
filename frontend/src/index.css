@@ -313,38 +313,59 @@ body {
 .skeleton-text-2 { width: 180px; height: 12px; }
 @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
 
-/* Desktop Media Queries */
+/* Desktop Media Queries (Google Maps Style) */
 @media (min-width: 768px) {
+  /* Mover el contenedor del mapa para cederle los 400px a la izquierda */
+  .map-container {
+    left: 400px;
+    width: calc(100vw - 400px);
+  }
+
+  /* El buscador se convierte en la cabecera de la barra lateral */
   .top-floating-bar {
-    left: 20px;
-    transform: none;
-    margin: 20px 0;
-  }
-  
-  .bottom-sheet {
-    left: 20px;
-    margin-left: 0;
-    bottom: 20px;
-    border-radius: 24px;
-    max-height: calc(100vh - 200px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
     width: 400px;
+    height: 160px; /* Suficiente espacio para las cajas de búsqueda */
+    border-radius: 0;
+    box-shadow: none;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
   }
-  .bottom-sheet.open { transform: translateY(0); }
-  .bottom-sheet:not(.open) { transform: translateY(calc(100% + 40px)); }
-  .sheet-handle { display: none; } /* No need for swipe handle on desktop */
   
+  /* La tarjeta inferior se convierte en el cuerpo de la barra lateral */
+  .bottom-sheet {
+    position: absolute;
+    left: 0;
+    top: 160px;
+    bottom: 0;
+    margin: 0;
+    width: 400px;
+    max-height: none; /* Ocupa todo el alto sobrante */
+    border-radius: 0;
+    box-shadow: none;
+    border-right: 1px solid var(--border);
+    z-index: 999;
+    background: var(--background);
+  }
+  
+  /* Mantener el sheet siempre abierto y estático en desktop */
+  .bottom-sheet.open { transform: none; }
+  .bottom-sheet:not(.open) { transform: none; display: block; }
+  .sheet-handle { display: none; } /* Ocultar la barrita de arrastre móvil */
+  
+  /* Ocultar barra de navegación inferior móvil */
   .bottom-nav {
-    display: none; /* Hide mobile bottom nav on desktop */
+    display: none;
   }
   
+  /* Reubicar botones flotantes a la derecha del todo */
   .fabs-container {
     bottom: 30px;
     right: 30px;
-  }
-
-  /* When nav is hidden, remove its space */
-  .bottom-sheet {
-    margin-bottom: 0;
   }
 }
 
