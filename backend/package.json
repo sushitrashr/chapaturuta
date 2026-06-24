@@ -1,0 +1,16 @@
+{
+  "name": "turuta-backend",
+  "version": "1.0.0",
+  "description": "Backend API para MVP de TuRuta Cajamarca",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "@turf/turf": "^7.3.5",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "pg": "^8.11.5"
+  }
+}

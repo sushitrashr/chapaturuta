@@ -1,0 +1,98 @@
+[
+  {
+    "id": "linea-10",
+    "name": "Línea 10 (Baños del Inca - Centro)",
+    "type": "Combi",
+    "color": "#E63946",
+    "price": "S/ 1.50",
+    "duration": "25 min",
+    "lineString": {
+      "type": "LineString",
+      "coordinates": [
+        [-78.5173, -7.1643],
+        [-78.5126, -7.1661],
+        [-78.5085, -7.1685],
+        [-78.5000, -7.1650],
+        [-78.4900, -7.1610],
+        [-78.4800, -7.1580],
+        [-78.4700, -7.1600],
+        [-78.4650, -7.1630]
+      ]
+    }
+  },
+  {
+    "id": "linea-1",
+    "name": "Línea 1 (Tartar - Mollepampa)",
+    "type": "Combi",
+    "color": "#41549a",
+    "price": "S/ 1.00",
+    "duration": "30 min",
+    "lineString": {
+      "type": "LineString",
+      "coordinates": [
+        [-78.4900, -7.1350], 
+        [-78.4950, -7.1400],
+        [-78.5000, -7.1500],
+        [-78.5050, -7.1600],
+        [-78.5170, -7.1640], 
+        [-78.5250, -7.1700],
+        [-78.5300, -7.1800]
+      ]
+    }
+  },
+  {
+    "id": "linea-4",
+    "name": "Línea 4 (Otuzco - Mercado)",
+    "type": "Combi",
+    "color": "#2A9D8F",
+    "price": "S/ 1.00",
+    "duration": "20 min",
+    "lineString": {
+      "type": "LineString",
+      "coordinates": [
+        [-78.4950, -7.1250],
+        [-78.5000, -7.1350],
+        [-78.5080, -7.1450],
+        [-78.5120, -7.1550],
+        [-78.5190, -7.1600]
+      ]
+    }
+  },
+  {
+    "id": "linea-14",
+    "name": "Línea 14 (UNC - Lucmacucho)",
+    "type": "Combi",
+    "color": "#E9C46A",
+    "price": "S/ 1.20",
+    "duration": "18 min",
+    "lineString": {
+      "type": "LineString",
+      "coordinates": [
+        [-78.5030, -7.1670], 
+        [-78.5080, -7.1650],
+        [-78.5130, -7.1620],
+        [-78.5173, -7.1643],
+        [-78.5220, -7.1600],
+        [-78.5250, -7.1550]
+      ]
+    }
+  },
+  {
+    "id": "linea-b",
+    "name": "Línea B (San Sebastián - UNC)",
+    "type": "Micro",
+    "color": "#F4A261",
+    "price": "S/ 1.00",
+    "duration": "15 min",
+    "lineString": {
+      "type": "LineString",
+      "coordinates": [
+        [-78.5190, -7.1680],
+        [-78.5150, -7.1650],
+        [-78.5100, -7.1660],
+        [-78.5060, -7.1670],
+        [-78.5030, -7.1670]
+      ]
+    }
+  }
+]
